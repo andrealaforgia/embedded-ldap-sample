@@ -2,7 +2,10 @@ package hello.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
+
+@Profile("!embedded-ldap")
 @Configuration
 @ConfigurationProperties(prefix="ldap.server")
 public class LdapServerProperties {
